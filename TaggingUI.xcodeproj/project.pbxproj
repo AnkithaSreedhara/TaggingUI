@@ -23,7 +23,6 @@
 		8DB64C7B24FE50F900377581 /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB64C7924FE50F900377581 /* TagsCollectionViewCell.xib */; };
 		8DB64C7D24FF61B600377581 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB64C7C24FF61B600377581 /* MainViewModel.swift */; };
 		8DB64C7F24FF649C00377581 /* UIViewNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB64C7E24FF649C00377581 /* UIViewNib.swift */; };
-		8DB64C852500A90B00377581 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8DB64C842500A90B00377581 /* README.md */; };
 		8DB64C8D2500A9ED00377581 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB64C8C2500A9EC00377581 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +57,6 @@
 		8DB64C7E24FF649C00377581 /* UIViewNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNib.swift; sourceTree = "<group>"; };
 		8DB64C8024FF76F600377581 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DB64C8124FF76F600377581 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8DB64C842500A90B00377581 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8DB64C8C2500A9EC00377581 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +105,6 @@
 				8DB64C892500A97C00377581 /* ViewModels */,
 				8DB64C882500A96000377581 /* ViewControllers */,
 				8DB64C862500A91300377581 /* Designs */,
-				8DB64C842500A90B00377581 /* README.md */,
 			);
 			path = TaggingUI;
 			sourceTree = "<group>";
@@ -252,7 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DB64C852500A90B00377581 /* README.md in Resources */,
 				8DB64C5724FE243600377581 /* LaunchScreen.storyboard in Resources */,
 				8DB64C7B24FE50F900377581 /* TagsCollectionViewCell.xib in Resources */,
 				8DB64C5424FE243600377581 /* Assets.xcassets in Resources */,
