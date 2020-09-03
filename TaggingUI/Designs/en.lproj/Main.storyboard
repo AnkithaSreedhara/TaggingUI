@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TaggingUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-Fh-Gih">
+                                <rect key="frame" x="0.0" y="44" width="414" height="269"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oOr-lf-ZKP">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9De-02-9MF">
+                                <rect key="frame" x="0.0" y="821" width="414" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7w-c9-sge">
+                                        <rect key="frame" x="8" y="20.5" width="327" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pm-Tx-Enz">
+                                        <rect key="frame" x="355" y="18" width="49" height="39"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9q1-9F-cys"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7Pm-Tx-Enz" firstAttribute="leading" secondItem="o7w-c9-sge" secondAttribute="trailing" constant="20" id="Bwd-QQ-t3i"/>
+                                    <constraint firstItem="7Pm-Tx-Enz" firstAttribute="centerY" secondItem="9De-02-9MF" secondAttribute="centerY" id="DR3-BY-ZE0"/>
+                                    <constraint firstItem="o7w-c9-sge" firstAttribute="leading" secondItem="9De-02-9MF" secondAttribute="leading" constant="8" id="JSZ-Y1-xMH"/>
+                                    <constraint firstItem="7Pm-Tx-Enz" firstAttribute="width" secondItem="o7w-c9-sge" secondAttribute="width" multiplier="0.15" id="Jha-Zx-Xfi"/>
+                                    <constraint firstItem="o7w-c9-sge" firstAttribute="centerY" secondItem="9De-02-9MF" secondAttribute="centerY" id="qUt-4C-lzR"/>
+                                    <constraint firstItem="7Pm-Tx-Enz" firstAttribute="height" secondItem="o7w-c9-sge" secondAttribute="height" multiplier="1.14286" id="sdk-EN-dQj"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Pm-Tx-Enz" secondAttribute="trailing" constant="10" id="syx-5z-quR"/>
+                                    <constraint firstAttribute="height" constant="75" id="zj6-ST-8vD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sVU-Fh-Gih" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ey5-qb-eiX"/>
+                            <constraint firstItem="sVU-Fh-Gih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GEr-ad-uhx"/>
+                            <constraint firstItem="9De-02-9MF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W94-KI-Ih7"/>
+                            <constraint firstItem="sVU-Fh-Gih" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="ahi-f8-ivX"/>
+                            <constraint firstAttribute="bottom" secondItem="9De-02-9MF" secondAttribute="bottom" id="b5j-JP-BGU"/>
+                            <constraint firstItem="9De-02-9MF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fJD-b2-8Gt"/>
+                            <constraint firstItem="sVU-Fh-Gih" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i8W-6j-U9B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="7Pm-Tx-Enz" id="Qa8-mz-MZG"/>
+                        <outlet property="collectionView" destination="sVU-Fh-Gih" id="DW7-4K-5fx"/>
+                        <outlet property="tagInputTextField" destination="o7w-c9-sge" id="Y63-ge-EuW"/>
+                        <outlet property="viewBottomConstraint" destination="b5j-JP-BGU" id="6c2-2t-lWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
+        </scene>
+    </scenes>
+</document>

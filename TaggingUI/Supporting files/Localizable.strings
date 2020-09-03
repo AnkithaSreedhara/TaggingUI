@@ -1,0 +1,10 @@
+/* 
+  LocalizableStrings.strings
+  TaggingUI
+
+  Created by Anki on 01/09/20.
+  Copyright © 2020 ankitha. All rights reserved.
+*/
+"app_name" = "Tagging UI";
+"textfield_placeholder" = "Enter Tag...";
+"add_button" = "Add";
