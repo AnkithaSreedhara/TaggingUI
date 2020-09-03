@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 protocol FileSaveProtocol:class {
+    //When json file save fails
     func saveFailed()
 }
 class MainViewModel: NSObject, UICollectionViewDataSource{
     var tagsArray : [String] = []
     weak var delegate : FileSaveProtocol? = nil
+    
+    //Collection view methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tagsArray.count
     }
@@ -35,6 +38,7 @@ class MainViewModel: NSObject, UICollectionViewDataSource{
     }
 }
 extension MainViewModel{
+    //JSON save and read methods
     // Helper method to get a URL to the user's documents directory
       func getDocumentsURL() -> URL {
           if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -53,7 +57,6 @@ extension MainViewModel{
           } catch {
             //Failed to write to file.
             completionHandler(error)
-//              fatalError(error.localizedDescription)
           }
       }
 
@@ -65,6 +68,7 @@ extension MainViewModel{
               let tags = try decoder.decode([String].self, from: data)
               return tags
           } catch {
+            //No records in the disk.
             return []
           }
       }

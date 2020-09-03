@@ -14,6 +14,7 @@ struct Theme {
 }
 extension Theme.Buttons {
     static func roundedButton(_ button: UIButton, title: String? = nil) {
+        //Adding Button corners and text for button.
         button.layer.cornerRadius = 15
         button.clipsToBounds = true
         if let title = title {

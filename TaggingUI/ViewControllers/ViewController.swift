@@ -25,9 +25,11 @@ class ViewController: UIViewController {
     let viewModel : MainViewModel = MainViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        //CollectionView
         collectionView.dataSource = viewModel
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "TagsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "TagsCollectionViewCell")
+        //LongGesture
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.longPressedCell(gesture:)))
         collectionView.addGestureRecognizer(longGesture)
         NotificationCenter.default.addObserver(self,
@@ -39,7 +41,8 @@ class ViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    
+    //Keyboard notification method to move the input view up and down.
+
     @objc func keyboardNotification(notification: NSNotification) {
         if let userInfo = notification.userInfo {
             let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
@@ -59,6 +62,7 @@ class ViewController: UIViewController {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
+        //Loading the array from disk.
         viewModel.tagsArray = viewModel.getFromDisk()
     }
     
@@ -78,6 +82,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDelegate{
+    //collection view delegate methods
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let cell = cell as? TagsCollectionViewCell {
             cell.delegate = self
@@ -102,6 +107,9 @@ extension ViewController:TagCellActions{
             self.collectionView.deleteItems(at: [index])
         })
     }
+}
+extension ViewController{
+    //To show the error alert when save fails.
     func showErrorAlert(){
         let alert = UIAlertController(title: "Sorry", message: "Save failed. Please retry", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
@@ -109,6 +117,7 @@ extension ViewController:TagCellActions{
     }
 }
 extension ViewController{
+    //Long press gesture action method.
     @objc func longPressedCell(gesture:UILongPressGestureRecognizer){
         switch(gesture.state) {
             

@@ -8,6 +8,7 @@
 
 import Foundation
 extension String {
+    //Can be localized and language can be changed. Only english is used now.
   var localized: String {
     return NSLocalizedString(self, comment: .empty)
   }

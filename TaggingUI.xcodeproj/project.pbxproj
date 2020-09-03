@@ -100,6 +100,7 @@
 		8DB64C4624FE243400377581 /* TaggingUI */ = {
 			isa = PBXGroup;
 			children = (
+				8DB64C5824FE243600377581 /* Info.plist */,
 				8DB64C8B2500A98E00377581 /* Supporting files */,
 				8DB64C8A2500A98400377581 /* CollectionViewCells */,
 				8DB64C892500A97C00377581 /* ViewModels */,
@@ -159,7 +160,6 @@
 				8DB64C4724FE243400377581 /* AppDelegate.swift */,
 				8DB64C4924FE243400377581 /* SceneDelegate.swift */,
 				8DB64C5324FE243600377581 /* Assets.xcassets */,
-				8DB64C5824FE243600377581 /* Info.plist */,
 				8DB64C5024FE243400377581 /* TaggingUI.xcdatamodeld */,
 				8DB64C7224FE3BCB00377581 /* Strings.swift */,
 				8DB64C7424FE3C3300377581 /* Localizable.strings */,
